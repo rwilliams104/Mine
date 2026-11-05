@@ -6,7 +6,7 @@ Hello! Welcome to my custom Linux Distrobution, MineOS or just Mine.  I decided 
 ## Day 1 Goals
 Todays goal is to get my development environment set up and begin programming my first bootable image. I am not sure if this program will be on the repository as it may be purely experimental and discarded later.
 
-## Day 1 Conclusion
+### Conclusion
 Today has been successful. I examined the BitBake recipe for BusyBox and learned what the different components of the recipe were doing. I learned the difference between RDEPENDS and DEPENDS and I learned how echo can be used to write to files. I also learned the difference between install -d and install -D and im now trying to understand how ${D} is utilized upon building.
 
 ## Day 2 - Configuring My Linux System to Support building with Yocto
