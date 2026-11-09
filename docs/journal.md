@@ -20,3 +20,11 @@ This day was spent planning a more detailed idea of what I want the first MVP of
 
 ### Conclusion
 btrfs is a very likely choice for the Mine root filesystem however I will need to test how impactful it is once I have some more legitimate builds of Mine available. Until then I will be stating btrfs as the root filesystem for Mine.
+
+## Day 4
+Today I spent a lot of time working on Mine. Im working towards building and launching my first core-image-minimal. I decided to use the supported 6.0 version of the poky distrobution and my targeted machine as qemux86-64 which ill be using for testing my builds. This ended up being one big debugging seassion as I ran into a few errors. The first error I got when trying to build this core image was failure to find a dependency named gawk. This was a simple fix because all I had to do was run sudo apt install gawk to install the dependency. The second error is listed in my debug journal and involved a lack of user namespace permissions for BitBakes Cooker process. To fix this - which im still working on - I am learning how to created a targeted AppArmor profile for the Cooker process through its python executable path that will allow cooker to be considered unconfined by AppArmor.
+
+### Conclusion
+I am expecting to run into errors frequently while doin this project so i decided to make a debug journal to log my thought processes and challenges avoiding help from AI where I can as I want to learn a deeper understanding of these error messages and processes along the way. If I do find I can not solve an issue after thorough research I provide AI with a detail description of how i approached it and ask it not to do anything for me but to show me what I did wrong and what I did right and point me in the right direction. Similar to how a teacher would help you work through a problem. This workflow should help me gain the understanding im looking for while also helping me maintain steady progress and learn more about working alongside AI as well.
+
+## Day 5 - AppArmor Debug Continued
